@@ -13,7 +13,7 @@ namespace CeAI
 
         }
 
-        static int[] ReturnMostFreq(int[] array, int k)
+        static List<int> ReturnMostFreq(int[] array, int k)
         {
             Dictionary<int, int> dic = new Dictionary<int, int>();
             foreach (int n in array)
@@ -29,7 +29,7 @@ namespace CeAI
 
             List<int> mostF = new List<int>();
             for (int i = 0; i < k; k++)
-                mostF.Add(dicSorted.Keys[i]);
+                mostF.Add(dicSorted.Keys.ElementAt(i));
 
             return mostF;
         }
